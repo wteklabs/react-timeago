@@ -11,7 +11,7 @@
     "prepublish": "npm run build",
     "test": "ava --require babel-register",
     "coverall": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "postinstall": "npm run build"
+    "postinstall": "npm run install && npm run build"
   },
   "ava": {
     "babel": "inherit"
