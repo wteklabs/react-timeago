@@ -1,4 +1,5 @@
 /* @flow */
+import 'babel-polyfill';
 import React, {Component} from 'react'
 import defaultFormatter from './defaultFormatter'
 import dateParser from './dateParser'
