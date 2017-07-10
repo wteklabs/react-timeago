@@ -11,7 +11,7 @@
     "prepublish": "npm run build",
     "test": "ava --require babel-register",
     "coverall": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
-    "postinstall": "npm run build"
+    "postinstall": "npm install"
   },
   "ava": {
     "babel": "inherit"
@@ -66,6 +66,5 @@
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
