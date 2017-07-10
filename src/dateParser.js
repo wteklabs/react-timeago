@@ -1,9 +1,9 @@
 // @flow
 
-export default function dateParser (date: string | number | Date): Date {
+export default function dateParser (date: string | number | Date): Date {  
   
-  Number.isNaN = Number.isNaN || function(value) {     
-    return value !== value;
+  Number.isNaN = Number.isNaN || function(value) {
+    return typeof value === 'number' && isNaN(value);
   }
   
   let parsed = new Date(date)
