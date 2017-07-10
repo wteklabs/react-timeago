@@ -2,12 +2,12 @@
 
 export default function dateParser (date: string | number | Date): Date {  
   
-  Number.isNaN = Number.isNaN || function(value) {
+  function isNaN(value) {
     return typeof value === 'number' && isNaN(value);
   }
   
   let parsed = new Date(date)
-  if (!Number.isNaN(parsed.valueOf())) {
+  if (isNaN(parsed.valueOf())) {
     return parsed
   }
 
