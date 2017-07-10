@@ -10,7 +10,8 @@
     "build": "npm run babel && npm run cpflow && npm run example",
     "prepublish": "npm run build",
     "test": "ava --require babel-register",
-    "coverall": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+    "coverall": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
+    "postinstall": "npm run build"
   },
   "ava": {
     "babel": "inherit"
@@ -67,5 +68,7 @@
     "react-dom": "^15.3.1"
   },
   "dependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0"
   }
 }
