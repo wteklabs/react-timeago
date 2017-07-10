@@ -1,10 +1,11 @@
 // @flow
 
-Number.isNaN = Number.isNaN || function(value) {     
-    return value !== value;
-}
-
 export default function dateParser (date: string | number | Date): Date {
+  
+  Number.isNaN = Number.isNaN || function(value) {     
+    return value !== value;
+  }
+  
   let parsed = new Date(date)
   if (!Number.isNaN(parsed.valueOf())) {
     return parsed
